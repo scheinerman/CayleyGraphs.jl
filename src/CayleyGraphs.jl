@@ -36,19 +36,11 @@ function CayleyGraph(plist::Vector{Permutation})::UG{Permutation}
         push!(finished, v)
 
         for p in plist
-            w = v*p
-            add!(G,v,w)
+            w = v * p
+            add!(G, v, w)
             if w ∉ finished
                 push!(todo, w)
             end
-
-            w = v*inv(p)
-            add!(G,v,w)
-            if w ∉ finished
-                push!(todo, w)
-            end
-
-
         end
     end
     return G
