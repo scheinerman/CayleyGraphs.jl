@@ -7,7 +7,7 @@ export CayleyGraph
     CayleyGraph(plist::Vector{Permutation})::UG{Permutation}
     CayleyGraph(p1,p2,...)
 
-Creat a Cayley graph using the permutations (generators) in `plist`.
+Create a Cayley graph using the permutations (generators) in `plist`.
 """
 function CayleyGraph(plist::Vector{Permutation})::UG{Permutation}
     if length(plist) == 0
