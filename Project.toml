@@ -1,4 +1,4 @@
 name = "CayleyGraphs"
 uuid = "bd95e281-d4ff-479e-9a05-3bb31ca31608"
 authors = ["Ed Scheinerman <ers@jhu.edu>"]
-version = "0.1.0"
+version = "0.0.1"
