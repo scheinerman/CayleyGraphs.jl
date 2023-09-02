@@ -25,6 +25,8 @@ If the permutation list contains a single (nonidentity)
 permutation, the result is a cycle. 
 
 ```
+julia> using Permutations, SimpleGraphs, CayleyGraphs
+
 julia> p = RandomPermutation(17)
 (1,14,8,16,15,4,11)(2,10,17,12)(3)(5)(6,13,7,9)
 
