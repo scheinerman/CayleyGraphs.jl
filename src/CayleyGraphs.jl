@@ -23,8 +23,6 @@ function CayleyGraph(plist::Vector{Permutation})::UG{Permutation}
     end
 
     G = UG{Permutation}()
-    name(G, "Cayley Graph")
-
 
     todo = Set{Permutation}()
     finished = Set{Permutation}()
@@ -44,11 +42,11 @@ function CayleyGraph(plist::Vector{Permutation})::UG{Permutation}
             end
         end
     end
+    
+    name(G, "Cayley Graph")
     return G
 end
 
 CayleyGraph(ps...) = CayleyGraph(collect(ps))
-
-
 
 end # module CayleyGraphs
