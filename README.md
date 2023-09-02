@@ -1,2 +1,2 @@
-# CayleyGraphs.jl
+# CayleyGraphs
 Simple graphs from permutations
