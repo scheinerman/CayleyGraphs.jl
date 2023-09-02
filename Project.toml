@@ -2,3 +2,12 @@ name = "CayleyGraphs"
 uuid = "bd95e281-d4ff-479e-9a05-3bb31ca31608"
 authors = ["Ed Scheinerman <ers@jhu.edu>"]
 version = "0.0.1"
+
+[deps]
+Permutations = "2ae35dd2-176d-5d53-8349-f30d82d94d4f"
+SimpleGraphs = "55797a34-41de-5266-9ec1-32ac4eb504d3"
+
+[compat]
+SimpleGraphs = "0.8"
+Permutations = "0.4"
+julia = "1"
