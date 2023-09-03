@@ -21,6 +21,7 @@ is always connected and vertex transitive.
 
 ## Examples
 
+### Single permutation
 If the permutation list contains a single (nonidentity)
 permutation, the result is a cycle. 
 
@@ -50,6 +51,7 @@ julia> deg(G)
  2
 ```
 
+### Two permutations
 Here is a more interesting example:
 ```
 julia> p = Permutation([6,1,2,3,4,5])
@@ -61,8 +63,9 @@ julia> q = Permutation([2,1,4,3,6,5])
 julia> G = CayleyGraph(p,q)
 Cayley Graph (n=18, m=27)
 ```
+### Large example
+Cayley graphs can easily be quite large.
 
-And a larger example:
 ```
 julia> p = RandomPermutation(8)
 (1,2,7,8,4)(3)(5,6)
@@ -73,3 +76,19 @@ julia> q = RandomPermutation(8)
 julia> G = CayleyGraph(p,q)
 Cayley Graph (n=5040, m=10080)
 ```
+
+### Cube as a Cayley graph
+
+```
+julia> p = Permutation([2,1,4,3])
+(1,2)(3,4)
+
+julia> q = Permutation([4,1,2,3])
+(1,4,3,2)
+
+julia> G = CayleyGraph(p,q)
+Cayley Graph (n=8, m=12)
+```
+Here is the result:
+
+![](./cayley-example.png)
