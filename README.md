@@ -89,6 +89,24 @@ julia> q = Permutation([4,1,2,3])
 julia> G = CayleyGraph(p,q)
 Cayley Graph (n=8, m=12)
 ```
-Here is the result:
 
 ![](./cayley-example.png)
+
+### Buckyball as Cayley graph
+
+```
+julia> p = Permutation([2,3,4,5,1])
+(1,2,3,4,5)
+
+julia> q = Permutation([2,1,4,3,5])
+(1,2)(3,4)(5)
+
+julia> G = CayleyGraph(p,q)
+Cayley Graph (n=60, m=90)
+
+julia> H = BuckyBall()
+Buckyball (n=60, m=90)
+
+julia> is_iso(G,H)   # requires SimpleGraphAlgorithms
+true
+```
